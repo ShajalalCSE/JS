@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trying to use js code in html</title>
-    <script type="text/javascript">
-        function myFunc(){
-            document.getElementById("demo").innerHTML="Successfully used js function from header tag"
-        }
-    </script>
-
+    <title>Js in body tag</title>
 </head>
 <body>
-    <p id="demo">Hi this is sha jalal</p>
-    <button type="button" onclick="myFunc()">click me</button>
+    <p id="demo">hi this is shajalal</p>
+    <button type="button" onclick="myFunc()">click me!</button>
+
+
+    <script>
+        function myFunc(){
+            document.getElementById("demo").innerHTML="This js function is working from body tag";
+        }
+        
+    </script>
     
 </body>
 </html>
