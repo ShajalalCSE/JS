@@ -1,25 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js code in separate file</title>
     <script src="script.js"></script>
 </head>
+
 <body>
-    <p id="demo">hi this is jalal</p>
-    <button type="button" onclick="myFunc1()">click me!</button>
-    <p id="demo1">hi this is jalal</p>
-    <button id="btn">click me!</button>
-    <p id="demo2">practicing in line event</p>
-    <button onclick="alert('this is in line even')">click me</button>
+    <!-- Click event -->
+    <p id="demo">Practicing eventListener</p>
+    <button id="btn">Click me!</button>
+    <br>
+
+    <!-- change event -->
+    <label>choose a city
+        <select name="city" id="city">
+            <option value="Dhaka">Dhaka</option>
+            <option value="Ctg">Ctg</option>
+            <option value="Gaiban">Gaiban</option>
+            <option value="jashore">jashore</option>
+        </select>
+        <p>You selected: <span id="demo1">Nothings</span></p>
+    </label>
+
+    <!-- Mouseover event -->
+    <p id="ms">mouseover in this text</p>
+
+    <!-- Keypress even -->
+    <p>Keypress event</p>
+    <textarea name="text" id="area"></textarea>
+    <p>The value is : <span id="press"></span></p>
+
+    <!-- focus event -->
+    <p>Focus area</p>
+    <textarea id="foc">this is focus area</textarea>
+
+    <!-- resize event -->
+    <p>Window width is : <span id="wd"></span></p>
+    <p>Window hight is : <span id="hd"></span></p>
 
     <script>
-       const btn = document.getElementById("btn")
-       btn.onclick = ()=>{
-        document.getElementById("demo1").innerHTML="Here event listener working"
-       }
+
+        //Click event
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", () => {
+            document.getElementById("demo").innerHTML = "Hi event listner!"
+            alert("Hi event listener!")
+        })
+
+        //change event 
+        const select = document.getElementById("city");
+        select.addEventListener("change", () => {
+            const val = document.getElementById("city").value;
+            document.getElementById("demo1").innerHTML = val;
+        })
+
+        //mouseover event
+
+        const ms = document.getElementById("ms");
+        ms.addEventListener("mouseover", () => {
+            ms.innerHTML = "Mouseover effect is working"
+        })
+
+        //keypress event
+        const area = document.getElementById("area");
+        area.addEventListener("keypress", () => {
+            document.getElementById("press").innerHTML = area.value
+        })
+        //focus event
+        const foc = document.getElementById("foc");
+        foc.addEventListener("focus", () => {
+            foc.style.background = "gray"
+        })
+        //blur event
+
+        const blr = document.getElementById("foc");
+        blr.addEventListener("blur", () => {
+            blr.style.background = "white"
+        })
+        //resize event
+
+        window.addEventListener("resize", () => {
+            document.getElementById("wd").innerHTML = window.innerWidth;
+            document.getElementById("hd").innerHTML = window.innerHeight
+        })
+
+
+
+
+
+
     </script>
-    
+
 </body>
+
 </html>
