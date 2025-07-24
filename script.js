@@ -12,3 +12,5 @@ function myFunc1() {
   document.getElementById("demo").innerHTML =
     "this sum is from myFunc1. sum = " + sum;
 }
+
+

@@ -9,6 +9,17 @@
 <body>
     <p id="demo">hi this is jalal</p>
     <button type="button" onclick="myFunc1()">click me!</button>
+    <p id="demo1">hi this is jalal</p>
+    <button id="btn">click me!</button>
+    <p id="demo2">practicing in line event</p>
+    <button onclick="alert('this is in line even')">click me</button>
+
+    <script>
+       const btn = document.getElementById("btn")
+       btn.onclick = ()=>{
+        document.getElementById("demo1").innerHTML="Here event listener working"
+       }
+    </script>
     
 </body>
 </html>
